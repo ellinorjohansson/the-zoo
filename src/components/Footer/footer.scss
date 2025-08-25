@@ -1,0 +1,65 @@
+@import '/src/style/variables.scss';
+
+footer {
+    box-sizing: border-box;
+    position: relative;
+    background: $color-bg-footer;
+    width: 100%;
+    padding: 48px 24px;
+    color: $color-font-main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.footer-header {
+    font-size: 2.2rem;
+    margin: 0;
+    color: $color-font-main;
+}
+
+.scroll-to-top {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid $color-scroll-border;
+    background: $color-scroll-bg;
+    color: $color-scroll-font;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: $color-scroll-hover-bg;
+    color: $color-scroll-hover-font;
+    transform: scale(1.1);
+}
+
+.scroll-to-top i {
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 16px;
+        gap: 16px;
+    }
+
+    .footer-header {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+    }
+
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.4rem;
+    }
+}

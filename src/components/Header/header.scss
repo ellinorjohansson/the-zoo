@@ -6,18 +6,18 @@
     align-items: center;
     padding: 0 80px; 
     height: 100px;
-    background-color: $primary-color;
+    background-color: $color-bg-header;
     position: relative;
     z-index: 10;
 
     .logo {
         font-size: 2rem;
         font-weight: bold;
-        color: $font-color;
+        color: $color-font-main;
     }
 
     .hamburger {
-        display: none; 
+        display: none;
         flex-direction: column;
         justify-content: center;
         width: 40px;
@@ -31,9 +31,9 @@
 
         .line {
             display: block;
-            height: 5px;   
-            width: 45px;   
-            background-color: $font-color;
+            height: 5px;
+            width: 45px;
+            background-color: $color-font-main;
             border-radius: 3px;
             transition: all 0.3s ease;
             margin: 5px 0;
@@ -41,7 +41,7 @@
 
         .menu-text {
             font-size: 0.9rem;
-            color: $font-color;
+            color: $color-font-main;
             margin-top: 4px;
             text-align: center;
         }
@@ -59,12 +59,12 @@
 
                 a {
                     text-decoration: none;
-                    color: $font-color;
+                    color: $color-font-main;
                     font-size: 1.5rem;
                     transition: color 0.3s;
 
                     &:hover {
-                        color: $hover-nav;
+                        color: $color-primary-hover;
                     }
                 }
             }
@@ -79,7 +79,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: $secondary-color;
+                background-color: $color-nav-mobile-bg;
                 z-index: 50;
                 justify-content: center;
                 align-items: center;
@@ -94,7 +94,7 @@
 
                         a {
                             font-size: 2rem;
-                            color: $font-color;
+                            color: $color-font-main;
                         }
                     }
                 }
@@ -154,7 +154,7 @@
 
                     a {
                         font-size: 1.5rem;
-                        color: $font-color;
+                        color: $color-font-main;
                     }
                 }
             }
