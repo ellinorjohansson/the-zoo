@@ -3,6 +3,7 @@ import { AnimalContext } from "../context/AnimalContext";
 import { useAnimalsService } from "../hooks/useAnimalHook";
 import { getAnimalStatus } from "../helpers/AnimalHelpers";
 import { Link } from "react-router";
+import '../style/animals.scss';
 
 export const Animals = () => {
   const { animals } = useContext(AnimalContext);
@@ -11,7 +12,7 @@ export const Animals = () => {
   useAnimalsService();
 
   return (
-    <div>
+    <div className="animals">
       <ul>
         {animals.map(animal => (
           <li key={animal.id}>
@@ -23,9 +24,9 @@ export const Animals = () => {
                   onError={e => (e.currentTarget.src = "")}
                   width={200}
                 />
-                <h3>{animal.name}</h3>
+                <h2>{animal.name}</h2>
                 <p>{animal.shortDescription}</p>
-                <p>Status: {getAnimalStatus(animal, { overview: true })}</p>
+                <p className="status">Status: {getAnimalStatus(animal, { overview: true })}</p>
               </div>
             </Link>
           </li>

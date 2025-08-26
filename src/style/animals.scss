@@ -1,0 +1,106 @@
+@import './variables.scss';
+
+.animals {
+    padding: 32px;
+    background-color: $color-bg-header;
+    color: $color-font-main;
+
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        background-color: $card-bg;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 1.5px solid $color-scroll-border;
+        padding: 24px 16px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+        transition: box-shadow 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .status {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-font-main;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 50%;
+                    border: 2px solid $color-scroll-border;
+                    object-fit: cover;
+                    margin-bottom: 7px;
+                }
+
+                h2 {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                    font-family: $font-family-header;
+                    color: $color-font-main;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    font-family: $font-family-paragraph;
+                }
+            }
+        }
+    }
+
+    // Tablet
+    @media (max-width: 1024px) {
+        ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    // Mobile
+    @media (max-width: 768px) {
+        ul {
+            grid-template-columns: 1fr;
+        }
+
+        li div h2 {
+            font-size: 1.2rem;
+        }
+
+        li div p {
+            font-size: 0.85rem;
+        }
+
+        li {
+            padding: 1rem;
+        }
+    }
+}
