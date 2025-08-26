@@ -1,0 +1,134 @@
+@import './variables.scss';
+
+.animal-detail {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 24px;
+  background-color: $color-bg-footer;
+  border-radius: 16px;
+  color: $color-font-main;
+  font-family: $font-family-paragraph;
+
+  h2 {
+    font-family: $font-family-header;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 24px;
+    color: $color-font-main;
+  }
+
+  .animal-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  .animal-info {
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      border-radius: 8px;
+      background-color: $color-scroll-bg;
+      color: $color-scroll-font;
+      font-weight: bold;
+      margin-bottom: 16px;
+
+      &.warning {
+        background-color: $color-primary-hover;
+        color: $color-bg-header;
+      }
+    }
+  }
+
+  .feed-button {
+    display: block;
+    margin: 24px auto 0;
+    padding: 14px 24px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $color-bg-header;
+    background-color: $color-primary-hover;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover:enabled {
+      background-color: lighten($color-primary-hover, 10%);
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      background-color: darken($color-bg-footer, 10%);
+      cursor: not-allowed;
+    }
+  }
+
+  // Tablet
+  @media (max-width: 1024px) {
+    padding: 24px;
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    .animal-image img {
+      width: 250px;
+      height: 250px;
+    }
+
+    .animal-info p {
+      font-size: 0.95rem;
+    }
+
+    .feed-button {
+      width: 80%;
+      padding: 14px 0;
+      font-size: 0.95rem;
+    }
+  }
+
+  // Mobile
+  @media (max-width: 768px) {
+    padding: 16px;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .animal-image img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .animal-info p {
+      font-size: 0.9rem;
+    }
+
+    .feed-button {
+      width: 100%;
+      padding: 14px 0;
+      font-size: 0.9rem;
+    }
+  }
+}
+
