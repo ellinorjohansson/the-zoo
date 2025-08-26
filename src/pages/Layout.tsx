@@ -1,15 +1,20 @@
-import { Outlet } from 'react-router';
-import { Header } from '../components/Header/Header';
-import { Footer } from '../components/Footer/Footer';
+import { useReducer } from "react";
+import { Outlet } from "react-router";
+import { AnimalContext } from "../context/AnimalContext";
+import { animalReducer, initialState } from "../reducers/AnimalReducer";
+import { Header } from "../components/Header/Header";
+import { Footer } from "../components/Footer/Footer";
 
 export const Layout = () => {
+  const [state, dispatch] = useReducer(animalReducer, initialState);
+
   return (
-    <>
-      <Header />
+    <AnimalContext.Provider value={{ animals: state.animals, dispatch }}>
+      <Header/>
       <main>
         <Outlet />
       </main>
-      <Footer />
-    </>
+      <Footer/>
+    </AnimalContext.Provider>
   );
 };
