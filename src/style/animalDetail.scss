@@ -146,7 +146,7 @@
         background-color: $color-primary-hover;
 
         &:hover:enabled {
-          background-color: lighten($color-primary-hover, 10%);
+          background-color: $color-button-bg-enabled;
           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
