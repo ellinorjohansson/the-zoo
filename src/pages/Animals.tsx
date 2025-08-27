@@ -29,6 +29,7 @@ export const Animals = () => {
                     alt={animal.name}
                     onError={(e) => (e.currentTarget.src = fallback)}
                     width={200}
+                    loading='lazy'
                   />
                 </div>
                 <div className="animal-info">
