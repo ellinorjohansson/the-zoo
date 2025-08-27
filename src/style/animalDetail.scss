@@ -151,7 +151,7 @@
         }
 
         &:disabled {
-          background-color: $color-button-bg-enabled;
+          background-color: $color-button-bg-disabled;
           cursor: not-allowed;
         }
       }
