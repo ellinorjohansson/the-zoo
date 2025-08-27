@@ -23,16 +23,25 @@ export const Home = () => {
           className="img-start"
           src={cow}
           alt="En brun långhårig ko med horn som går på ett berg med synlig sten och grönt gräs som täcker delar av berget."
+          loading='eager'
+          width={1920}
+          height={1080}
         />
         <img
           className="img-start"
           src={elephant}
           alt="Två stycken elefanter som går på savannen mot kameran"
+          loading='eager'
+          width={1920}
+          height={1080}
         />
         <img
           className="img-start"
           src={squirell}
           alt="En ekorre som tittar in i kameran med svart bakgrund"
+          loading='eager'
+          width={1920}
+          height={1080}
         />
       </div>
       <div className="todays-animal">
