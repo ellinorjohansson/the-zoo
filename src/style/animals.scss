@@ -78,6 +78,27 @@
       background-color: $status-bg;
       padding: 10px;
       border-radius: 10px;
+
+      &.warning {
+        background-color: $color-primary-hover;
+        color: $color-bg-header;
+      }
+
+      &.hungry {
+        background-color: $hungry-bg;
+        color: #fff;
+        animation: hungryPulse 1.2s infinite alternate;
+      }
+    }
+
+    @keyframes hungryPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba($color-accent, 0.5);
+      }
+
+      100% {
+        box-shadow: 0 0 16px 8px rgba($color-accent, 0.2);
+      }
     }
 
     a {

@@ -34,7 +34,18 @@ export const Animals = () => {
                 <div className="animal-info">
                   <h2>{animal.name}</h2>
                   <p className="short-desc">{animal.shortDescription}</p>
-                  <p className="status">
+                  <p
+                    className={
+                      'status' +
+                      (getAnimalStatus(animal, { overview: true }) === 'Hungrig'
+                        ? ' hungry'
+                        : '') +
+                      (getAnimalStatus(animal, { overview: true }) ===
+                      'Snart hungrig'
+                        ? ' warning'
+                        : '')
+                    }
+                  >
                     Status: {getAnimalStatus(animal, { overview: true })}
                   </p>
                 </div>
