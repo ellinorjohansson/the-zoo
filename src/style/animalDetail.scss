@@ -19,10 +19,11 @@
     background: none;
     border: none;
     color: $color-accent;
-    font-weight: 500;
     cursor: pointer;
     transition: color 0.2s ease;
     font-size: 1.3rem;
+    font-family: $font-family-paragraph;
+
 
     i {
       font-size: 1.5rem;
@@ -199,6 +200,7 @@
 
         .status-section {
           margin: 0;
+
           .status {
             font-size: 1.2rem;
           }
@@ -248,6 +250,7 @@
 
         .status-section {
           margin: 0;
+
           .status {
             font-size: 1.2rem;
           }

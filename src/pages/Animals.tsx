@@ -35,7 +35,7 @@ export const Animals = () => {
                     />
                   </div>
                   <div className="animal-info">
-                    <h2>{animal.name}</h2>
+                    <h2 className='animal-name'>{animal.name}</h2>
                     <p className="short-desc">{animal.shortDescription}</p>
                     <span className={getStatusClass(status)}>Status: {status}</span>
                   </div>

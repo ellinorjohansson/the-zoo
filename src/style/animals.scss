@@ -78,6 +78,8 @@
       background-color: $status-bg;
       padding: 10px;
       border-radius: 10px;
+      font-size: 0.8rem;
+      font-family: $font-family-paragraph;
 
       &.warning {
         background-color: $color-primary-hover;
@@ -132,9 +134,9 @@
         flex-direction: column;
         align-items: center;
 
-        h2 {
-          font-size: 1.3rem;
-          font-weight: 600;
+        .animal-name {
+          font-size: 1.7rem;
+          font-weight: 100;
           margin-bottom: 5px;
           font-family: $font-family-header;
           color: $color-font-main;
