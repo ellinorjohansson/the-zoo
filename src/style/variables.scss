@@ -8,12 +8,13 @@ $color-primary-hover: #96caff;
 
 $gardient-bg: linear-gradient(180deg, #0d1b2a 0%, #1b263b 100%);
 
-// Scrollbar
+// Scrollbar / buttons
 $color-scroll-bg: #0d1b2a;
 $color-scroll-border: #f5f5dc;
 $color-scroll-font: #f5f5dc;
 $color-scroll-hover-bg: #39546b;
 $color-scroll-hover-font: #d2d9fb;
+$color-button-bg-enabled: #202b36;
 
 // Navigation mobile
 $color-nav-mobile-bg: #1b263b;
@@ -21,7 +22,8 @@ $color-nav-mobile-bg: #1b263b;
 // Cards 
 $card-bg: #253a3d;
 $home-bg: #0b0e17;
-$status-bg: #253a3d;  
+$status-bg: #253a3d; 
+$hungry-bg: rgb(102, 37, 37);
 
 // Fonts
 $font-family-header: 'Pattaya', sans-serif;
