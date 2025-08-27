@@ -4,6 +4,7 @@ import { getAnimalStatus } from '../helpers/AnimalHelpers';
 import { useNavigate, useParams } from 'react-router';
 import '../style/animalDetail.scss';
 import fallback from '../assets/fallback_imgage.avif';
+import { getStatusClass } from '../helpers/StatusHelper';
 
 export const AnimalDetail = () => {
   const { id } = useParams();
@@ -15,7 +16,6 @@ export const AnimalDetail = () => {
 
   const status = getAnimalStatus(animal, { overview: false });
   const canFeed = status === 'Hungrig';
-  const showWarning = status === 'Snart hungrig';
 
   const feedAnimal = () => {
     if (!canFeed) return;
@@ -41,13 +41,7 @@ export const AnimalDetail = () => {
           <div className="title-status-wrapper">
             <h2>{animal.name}</h2>
             <div className="status-section">
-              <span
-                className={`status${status === 'Hungrig' ? ' hungry' : ''}${
-                  showWarning ? ' warning' : ''
-                }`}
-              >
-                {status}
-              </span>
+              <span className={getStatusClass(status)}>{status}</span>
             </div>
           </div>
           <p className="description">{animal.longDescription}</p>

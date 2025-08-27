@@ -5,6 +5,7 @@ import { getAnimalStatus } from '../helpers/AnimalHelpers';
 import { Link } from 'react-router';
 import '../style/animals.scss';
 import fallback from '../assets/fallback_imgage.avif';
+import { getStatusClass } from '../helpers/StatusHelper';
 
 export const Animals = () => {
   const { animals } = useContext(AnimalContext);
@@ -36,15 +37,7 @@ export const Animals = () => {
                   <div className="animal-info">
                     <h2>{animal.name}</h2>
                     <p className="short-desc">{animal.shortDescription}</p>
-                    <p
-                      className={
-                        'status' +
-                        (status === 'Hungrig' ? ' hungry' : '') +
-                        (status === 'Snart hungrig' ? ' warning' : '')
-                      }
-                    >
-                      Status: {status}
-                    </p>
+                    <span className={getStatusClass(status)}>Status: {status}</span>
                   </div>
                 </Link>
               </li>
