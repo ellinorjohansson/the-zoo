@@ -13,9 +13,11 @@ export const Animals = () => {
 
   return (
     <>
-      <h2 className='animal-header'>Välkommen till djursidan!</h2>
-      <p className='animal-p'>Vänligen, respektera djuren.</p>
-      <div className="animals">
+      <section className='a-start-section'>
+        <h2 className="animals-header">Välkommen till djursidan!</h2>
+        <p className="animals-p">Vänligen, respektera djuren.</p>
+      </section>
+      <section className="animals">
         <ul>
           {animals.map((animal) => (
             <li key={animal.id}>
@@ -39,7 +41,7 @@ export const Animals = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </section>
     </>
   );
 };
