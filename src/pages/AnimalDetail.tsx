@@ -3,6 +3,7 @@ import { AnimalContext } from '../context/AnimalContext';
 import { getAnimalStatus } from '../helpers/AnimalHelpers';
 import { useParams } from 'react-router';
 import '../style/animalDetail.scss';
+import fallback from '../assets/fallback_imgage.avif';
 
 export const AnimalDetail = () => {
   const { id } = useParams();
@@ -27,13 +28,13 @@ export const AnimalDetail = () => {
         <img
           src={animal.imageUrl}
           alt={animal.name}
-          onError={(e) => (e.currentTarget.src = '')}
+          onError={(e) => (e.currentTarget.src = fallback)}
           width={300}
         />
       </div>
-      <div className='animal-info'>
+      <div className="animal-info">
         <p>{animal.longDescription}</p>
-        <p className='status'>Status: {status}</p>
+        <p className="status">Status: {status}</p>
         {animal.lastFed && (
           <p>
             Senast matad: {new Date(animal.lastFed).toLocaleString('sv-SE')}
@@ -41,7 +42,7 @@ export const AnimalDetail = () => {
         )}
         {showWarning && <p>Djuret behöver snart matas!</p>}
       </div>
-      <button className='feed-button' onClick={feedAnimal} disabled={!canFeed}>
+      <button className="feed-button" onClick={feedAnimal} disabled={!canFeed}>
         Mata djuret
       </button>
     </div>

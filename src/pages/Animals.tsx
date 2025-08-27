@@ -4,6 +4,7 @@ import { useAnimalsService } from '../hooks/useAnimalHook';
 import { getAnimalStatus } from '../helpers/AnimalHelpers';
 import { Link } from 'react-router';
 import '../style/animals.scss';
+import fallback from '../assets/fallback_imgage.avif';
 
 export const Animals = () => {
   const { animals } = useContext(AnimalContext);
@@ -13,7 +14,7 @@ export const Animals = () => {
 
   return (
     <>
-      <section className='a-start-section'>
+      <section className="a-start-section">
         <h2 className="animals-header">Välkommen till djursidan!</h2>
         <p className="animals-p">Vänligen, respektera djuren.</p>
       </section>
@@ -26,7 +27,7 @@ export const Animals = () => {
                   <img
                     src={animal.imageUrl}
                     alt={animal.name}
-                    onError={(e) => (e.currentTarget.src = '')}
+                    onError={(e) => (e.currentTarget.src = fallback)}
                     width={200}
                   />
                 </div>
