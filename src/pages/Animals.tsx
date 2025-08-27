@@ -20,39 +20,36 @@ export const Animals = () => {
       </section>
       <section className="animals">
         <ul>
-          {animals.map((animal) => (
-            <li key={animal.id}>
-              <Link to={`/animals/${animal.id}`}>
-                <div className="image-container">
-                  <img
-                    src={animal.imageUrl}
-                    alt={animal.name}
-                    onError={(e) => (e.currentTarget.src = fallback)}
-                    width={200}
-                    loading='lazy'
-                  />
-                </div>
-                <div className="animal-info">
-                  <h2>{animal.name}</h2>
-                  <p className="short-desc">{animal.shortDescription}</p>
-                  <p
-                    className={
-                      'status' +
-                      (getAnimalStatus(animal, { overview: true }) === 'Hungrig'
-                        ? ' hungry'
-                        : '') +
-                      (getAnimalStatus(animal, { overview: true }) ===
-                      'Snart hungrig'
-                        ? ' warning'
-                        : '')
-                    }
-                  >
-                    Status: {getAnimalStatus(animal, { overview: true })}
-                  </p>
-                </div>
-              </Link>
-            </li>
-          ))}
+          {animals.map((animal) => {
+            const status = getAnimalStatus(animal, { overview: true });
+            return (
+              <li key={animal.id}>
+                <Link to={`/animals/${animal.id}`}>
+                  <div className="image-container">
+                    <img
+                      src={animal.imageUrl}
+                      alt={animal.name}
+                      onError={(e) => (e.currentTarget.src = fallback)}
+                      width={200}
+                    />
+                  </div>
+                  <div className="animal-info">
+                    <h2>{animal.name}</h2>
+                    <p className="short-desc">{animal.shortDescription}</p>
+                    <p
+                      className={
+                        'status' +
+                        (status === 'Hungrig' ? ' hungry' : '') +
+                        (status === 'Snart hungrig' ? ' warning' : '')
+                      }
+                    >
+                      Status: {status}
+                    </p>
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </section>
     </>
