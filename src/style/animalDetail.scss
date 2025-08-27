@@ -11,7 +11,7 @@
 
   .back-button {
     position: absolute;
-    top: 40px;
+    top: 70px;
     left: 80px;
     display: inline-flex;
     align-items: center;
@@ -42,6 +42,7 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    margin: 60px 0;
 
     .animal-image {
       flex: 1 1 300px;
@@ -159,8 +160,8 @@
   // Tablet
   @media (max-width: 1024px) {
     .back-button {
-      top: 50px;
-      left: 80px;
+      top: 20px;
+      left: 30px;
     }
 
     .animal-card {
@@ -197,6 +198,7 @@
         }
 
         .status-section {
+          margin: 0;
           .status {
             font-size: 1.2rem;
           }
@@ -212,8 +214,8 @@
   // Mobile
   @media (max-width: 768px) {
     .back-button {
-      top: 50px;
-      left: 50px;
+      top: 20px;
+      left: 20px;
     }
 
     .animal-card {
@@ -245,6 +247,7 @@
         }
 
         .status-section {
+          margin: 0;
           .status {
             font-size: 1.2rem;
           }
