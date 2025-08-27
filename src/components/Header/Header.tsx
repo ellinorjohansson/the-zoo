@@ -24,12 +24,12 @@ export const Header = () => {
         <ul>
           <li>
             <NavLink to="/" onClick={toggleMenu}>
-              Home
+              Hem
             </NavLink>
           </li>
           <li>
             <NavLink to="/animals" onClick={toggleMenu}>
-              Animals
+              Djuren
             </NavLink>
           </li>
         </ul>
