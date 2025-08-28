@@ -28,6 +28,22 @@
   .welcome-word:nth-child(3) {
     color: $color-animal;
   }
+
+  .animal-page-button {
+    background: $color-accent;
+    color: $color-font-main;
+    font-family: $font-family-paragraph;
+    padding: 12px 80px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    &:hover {
+      background: $color-primary-hover;
+    }
+  }
 }
 
 .carousel {
@@ -64,11 +80,9 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.7) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.7) 100%);
     z-index: 1;
   }
 }
@@ -144,9 +158,10 @@
       opacity: 0.9;
     }
 
-    button {
+    .about-animal-button {
       background: $color-accent;
       color: $color-font-main;
+      font-family: $font-family-paragraph;
       padding: 12px 20px;
       border-radius: 0.6rem;
       border: none;
@@ -174,6 +189,7 @@
 @media (max-width: 768px) {
   .welcome-wrapper {
     left: 40%;
+
     .welcome-word {
       font-size: 6rem;
     }

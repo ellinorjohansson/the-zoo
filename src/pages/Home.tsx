@@ -18,10 +18,13 @@ export const Home = () => {
 
   return (
     <>
-      <div className='welcome-wrapper'>
-        <h2 className='welcome-word'>Live</h2>
-        <h2 className='welcome-word'>Laugh</h2>
-        <h2 className='welcome-word'>Animal</h2>
+      <div className="welcome-wrapper">
+        <h2 className="welcome-word">Live</h2>
+        <h2 className="welcome-word">Laugh</h2>
+        <h2 className="welcome-word">Animal</h2>
+        <Link to={`/animals`}>
+          <button className="animal-page-button">Gå till djursidan</button>
+        </Link>
       </div>
       <div className="carousel">
         <img
@@ -52,7 +55,7 @@ export const Home = () => {
       <div className="todays-animal">
         <h2>Dagens djur</h2>
         {todaysAnimal ? (
-          <div className='todays-card'>
+          <div className="todays-card">
             <img
               src={todaysAnimal.imageUrl}
               alt={todaysAnimal.name}
@@ -63,7 +66,7 @@ export const Home = () => {
               {todaysAnimal.shortDescription}
             </p>
             <Link to={`/animals/${todaysAnimal.id}`}>
-              <button>Mer om djuret</button>
+              <button className="about-animal-button">Mer om djuret</button>
             </Link>
           </div>
         ) : (
