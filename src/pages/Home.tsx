@@ -1,7 +1,7 @@
 import '../style/home.scss';
-import cow from '../assets/cow_bg.avif';
-import elephant from '../assets/elephant_bg.avif';
-import squirell from '../assets/squirell_bg.avif';
+import bird from '../assets/bird_bg.avif';
+import lion from '../assets/lion_bg.avif';
+import magnet from '../assets/magnet_bg.avif';
 import { useContext } from 'react';
 import { AnimalContext } from '../context/AnimalContext';
 import { Link } from 'react-router';
@@ -19,34 +19,31 @@ export const Home = () => {
   return (
     <>
       <div className='welcome-wrapper'>
-        <h2 className="welcome-text">Välkommen!</h2>
-        <p className="welcome-p">
-          Följ med på en resa genom naturens mångfald. Lär känna dagens djur,
-          deras liv och deras unika egenskaper. Direkt från savannens vidder
-          till skogens skrymslen.
-        </p>
+        <h2 className='welcome-word'>Live</h2>
+        <h2 className='welcome-word'>Laugh</h2>
+        <h2 className='welcome-word'>Animal</h2>
       </div>
       <div className="carousel">
         <img
           className="img-start"
-          src={cow}
-          alt="En brun långhårig ko med horn som går på ett berg med synlig sten och grönt gräs som täcker delar av berget."
+          src={bird}
+          alt="En blå gul fågel med lång mörk vass näpp. Sitter på en pinne med blurrig bakgrund."
           loading="eager"
           width={1920}
           height={1080}
         />
         <img
           className="img-start"
-          src={elephant}
-          alt="Två stycken elefanter som går på savannen mot kameran"
+          src={lion}
+          alt="Två stycken lejon som kollar in i kameran, i jakt position där en av dom som är närmast kameran har öppen mun och den andra smyger lite bakom."
           loading="eager"
           width={1920}
           height={1080}
         />
         <img
           className="img-start"
-          src={squirell}
-          alt="En ekorre som tittar in i kameran med svart bakgrund"
+          src={magnet}
+          alt="En ljusrosa magnet som flyter omkring i blått vatten."
           loading="eager"
           width={1920}
           height={1080}
@@ -55,7 +52,7 @@ export const Home = () => {
       <div className="todays-animal">
         <h2>Dagens djur</h2>
         {todaysAnimal ? (
-          <div>
+          <div className='todays-card'>
             <img
               src={todaysAnimal.imageUrl}
               alt={todaysAnimal.name}

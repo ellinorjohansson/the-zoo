@@ -1,11 +1,40 @@
 @import './variables.scss';
 
+.welcome-wrapper {
+  position: absolute;
+  top: 60%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: left;
+  padding: 20px;
+
+  .welcome-word {
+    font-family: $font-family-header;
+    font-size: 6rem;
+    font-weight: 100;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .welcome-word:nth-child(1) {
+    color: $color-live;
+  }
+
+  .welcome-word:nth-child(2) {
+    color: $color-laugh;
+  }
+
+  .welcome-word:nth-child(3) {
+    color: $color-animal;
+  }
+}
+
 .carousel {
   position: relative;
-  width: auto;   
+  width: 100%;
   height: 100vh;
   overflow: hidden;
-  z-index: -1;
   background-color: $home-bg;
 
   .img-start {
@@ -18,15 +47,151 @@
     transition: opacity 1s;
   }
 
-  img:nth-child(1) { animation-delay: 0s; }
-  img:nth-child(2) { animation-delay: 4s; }
-  img:nth-child(3) { animation-delay: 8s; }
+  img:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  img:nth-child(2) {
+    animation-delay: 4s;
+  }
+
+  img:nth-child(3) {
+    animation-delay: 8s;
+  }
+
+  // overlay för att göra texten mer läsbar
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+  }
 }
 
 @keyframes carouselAnimation {
-  0%   { opacity: 0; transform: scale(1); }
-  8%   { opacity: 1; transform: scale(1.03); }
-  30%  { opacity: 1; transform: scale(1.05); }
-  38%  { opacity: 0; transform: scale(1.07); }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  8% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  38% {
+    opacity: 0;
+    transform: scale(1.07);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.todays-animal {
+  background: $gardient-bg;
+  color: $color-font-main;
+  padding: 48px 20px;
+  text-align: center;
+
+  h2 {
+    font-family: $font-family-header;
+    font-weight: 100;
+    font-size: 3rem;
+    margin-bottom: 32px;
+  }
+
+  .todays-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+
+    .todays-image {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .todays-name {
+      font-family: $font-family-header;
+      font-size: 2rem;
+      color: $color-accent;
+      margin: 8px 0;
+    }
+
+    .todays-description {
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    button {
+      background: $color-accent;
+      color: $color-font-main;
+      padding: 12px 20px;
+      border-radius: 0.6rem;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+
+      &:hover {
+        background: $color-primary-hover;
+      }
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 1024px) {
+  .welcome-wrapper {
+    .welcome-word {
+      font-size: 6rem;
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .welcome-wrapper {
+    left: 40%;
+    .welcome-word {
+      font-size: 6rem;
+    }
+  }
+
+  .todays-animal {
+    padding: 30px 46px;
+
+    .todays-card {
+      padding: 24px;
+
+      .todays-name {
+        font-size: 2rem;
+      }
+
+      .todays-description {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
