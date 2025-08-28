@@ -63,10 +63,11 @@
     text-align: center;
     border: 1.5px solid $home-bg;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-    transition: box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
 
     &:hover {
       box-shadow: 0 6px 18px rgba(0, 0, 0, 12);
+      transform: scale(1.02);
     }
 
     .status {
@@ -169,12 +170,13 @@
     gap: 40px;
   }
 
-  .animals li .animal-info h2 {
-    font-size: 1.1rem;
+  .animals li a .animal-info .animal-name {
+    font-size: 2rem;
   }
 
-  .animals li .animal-info .short-desc {
-    font-size: 0.85rem;
+  .animals li a .animal-info .short-desc {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }
 
@@ -182,13 +184,13 @@
 @media (max-width: 768px) {
   .a-start-section {
     .animals-header {
-      font-size: 1.9rem;
+      font-size: 2rem;
       text-align: center;
       margin-top: 30px;
     }
 
     .animals-p {
-      font-size: 0.9rem;
+      font-size: 1rem;
       text-align: center;
     }
   }
@@ -198,12 +200,13 @@
     gap: 40px;
   }
 
-  .animals li .animal-info h2 {
-    font-size: 1rem;
+  .animals li a .animal-info .animal-name {
+    font-size: 2rem;
   }
 
-  .animals li .animal-info .short-desc {
-    font-size: 0.8rem;
+  .animals li a .animal-info .short-desc {
+    font-size: 1rem;
     margin: 12px;
+    line-height: 1.6;
   }
 }

@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 16px;
+  padding: 30px;
   background: $gardient-bg;
   position: relative;
 
@@ -144,6 +144,7 @@
         cursor: pointer;
         color: $color-bg-header;
         background-color: $color-primary-hover;
+        font-family: $font-family-paragraph;
 
         &:hover:enabled {
           background-color: $color-button-bg-enabled;
@@ -241,7 +242,7 @@
         }
 
         .description {
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
 
         .feed-button {
