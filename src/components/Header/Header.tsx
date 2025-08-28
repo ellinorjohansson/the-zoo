@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { useState } from 'react';
 import './header.scss';
 
@@ -9,7 +9,9 @@ export const Header = () => {
 
   return (
     <header className={`header ${menuOpen ? 'open' : ''}`}>
-      <h1 className="logo">The ZOO</h1>
+      <Link to={`/`}>
+        <button className="logo">The ZOO</button>
+      </Link>
 
       <button className="hamburger" onClick={toggleMenu}>
         <span className="line"></span>
