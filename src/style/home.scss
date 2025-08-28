@@ -38,7 +38,7 @@
     border: none;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 16px;
 
     &:hover {
       background: $color-primary-hover;
@@ -139,7 +139,7 @@
       width: 100%;
       max-width: 400px;
       border-radius: 8px;
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
@@ -163,11 +163,11 @@
       color: $color-font-main;
       font-family: $font-family-paragraph;
       padding: 12px 20px;
-      border-radius: 0.6rem;
+      border-radius: 8px;
       border: none;
       font-size: 1rem;
       cursor: pointer;
-      margin-top: 1rem;
+      margin-top: 16px;
 
       &:hover {
         background: $color-primary-hover;

@@ -10,7 +10,8 @@ export const initialState: AnimalState = {
 
 export type AnimalAction =
   | { type: "SET_ANIMALS"; payload: Animal[] }
-  | { type: "FEED_ANIMAL"; payload: { id: string } };
+  | { type: "FEED_ANIMAL"; payload: { id: string } 
+};
 
 export const animalReducer = (
   state: AnimalState,

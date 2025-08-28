@@ -23,7 +23,7 @@ export const useAnimalsService = () => {
 
         dispatch({ type: "SET_ANIMALS", payload: animalsWithLocalFed });
       } catch (err) {
-        console.error("Couldn't get animals", err);
+        console.error("Kunde inte hämta djuren", err);
       }
     };
 
