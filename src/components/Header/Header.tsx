@@ -16,7 +16,7 @@ export const Header = () => {
         <span className="line"></span>
         <span className="line"></span>
         <span className="menu-text hamburger">
-          {menuOpen ? 'Close' : 'Menu'}
+          {menuOpen ? 'Stäng' : 'Meny'}
         </span>
       </button>
 
