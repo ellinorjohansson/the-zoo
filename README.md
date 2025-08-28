@@ -5,7 +5,7 @@ The focus is on UI/UX, modern styling, and the use of React concepts such as rou
 
 The application is built with React, uses SCSS for styling, and fetches live animal data from an external API.
 
-[Link to live version]()
+[Link to live version](https://medieinstitutet.github.io/fed24d-the-zoo-ellinorjohansson/)
 
 ## Table of Contents
 
