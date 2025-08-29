@@ -6,10 +6,12 @@ export const useAnimalsService = () => {
   const { animals, dispatch } = useContext(AnimalContext);
 
   useEffect(() => {
-    if (animals.length > 0) return; 
+    if (animals.length > 0) return;
 
     const fetchAnimals = async () => {
       try {
+        dispatch({ type: "ANIMALS_FETCHING" });
+
         const res = await fetch("https://animals.azurewebsites.net/api/animals");
         const data: Animal[] = await res.json();
 
@@ -21,7 +23,7 @@ export const useAnimalsService = () => {
             : animal;
         });
 
-        dispatch({ type: "SETED_ANIMALS", payload: animalsWithLocalFed });
+        dispatch({ type: "ANIMALS_FETCHED", payload: animalsWithLocalFed });
       } catch (err) {
         console.error("Kunde inte hämta djuren", err);
       }

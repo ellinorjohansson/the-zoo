@@ -2,24 +2,30 @@ import type { Animal } from "../models/Animal";
 
 export interface AnimalState {
   animals: Animal[];
+  loading: boolean;
 }
 
 export const initialState: AnimalState = {
   animals: [],
+  loading: false,
 };
 
 export type AnimalAction =
-  | { type: "SETED_ANIMALS"; payload: Animal[] }
-  | { type: "FEEDED_ANIMAL"; payload: { id: string } 
-};
+  | { type: "ANIMALS_FETCHING" }
+  | { type: "ANIMALS_FETCHED"; payload: Animal[] }
+  | { type: "FEEDED_ANIMAL"; payload: { id: string } };
 
 export const animalReducer = (
   state: AnimalState,
   action: AnimalAction
 ): AnimalState => {
   switch (action.type) {
-    case "SETED_ANIMALS": {
-      const newState = { ...state, animals: action.payload };
+    case "ANIMALS_FETCHING": {
+      return { ...state, loading: true };
+    }
+
+    case "ANIMALS_FETCHED": {
+      const newState = { ...state, animals: action.payload, loading: false };
       localStorage.setItem("animals", JSON.stringify(newState.animals));
       return newState;
     }
@@ -36,7 +42,7 @@ export const animalReducer = (
       localStorage.setItem("animals", JSON.stringify(updatedAnimals));
       return { ...state, animals: updatedAnimals };
     }
-    
+
     default:
       return state;
   }

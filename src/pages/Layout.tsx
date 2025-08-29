@@ -9,7 +9,7 @@ export const Layout = () => {
   const [state, dispatch] = useReducer(animalReducer, initialState);
 
   return (
-    <AnimalContext.Provider value={{ animals: state.animals, dispatch }}>
+    <AnimalContext.Provider value={{ ...state, dispatch }}>
       <Header/>
       <main>
         <Outlet />

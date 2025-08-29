@@ -19,7 +19,7 @@ export const AnimalDetail = () => {
 
   const feedAnimal = () => {
     if (!canFeed) return;
-    dispatch({ type: 'FEED_ANIMAL', payload: { id: animal.id } });
+    dispatch({ type: 'FEEDED_ANIMAL', payload: { id: animal.id } });
   };
 
   return (

@@ -4,10 +4,12 @@ import type { AnimalAction } from "../reducers/AnimalReducer";
 
 export type AnimalContextType = {
   animals: Animal[];
+  loading: boolean;
   dispatch: Dispatch<AnimalAction>;
 };
 
 export const AnimalContext = createContext<AnimalContextType>({
   animals: [],
+  loading: false,
   dispatch: () => {},
 });
