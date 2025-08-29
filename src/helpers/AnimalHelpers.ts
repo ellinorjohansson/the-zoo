@@ -15,12 +15,12 @@ export const getAnimalStatus = (
   const hoursSinceFed = (now - lastFed) / 1000 / 60 / 60;
 
   if (options?.overview) {
-    // Översiktssidan
+    // Overviewpage
     if (hoursSinceFed >= 5) return "Hungrig"; 
     if (hoursSinceFed >= 3) return "Snart hungrig";
     return "Mätt";
   } else {
-    // Detaljsidan
+    // Detailpage
     if (hoursSinceFed >= 4) return "Hungrig";
     if (hoursSinceFed >= 3) return "Snart hungrig";
     return "Mätt";
