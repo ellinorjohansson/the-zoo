@@ -156,10 +156,7 @@ Ha roligt, skratta och lär er massor!
 - C:\Work\AssignmentCorrector\backend\repos\fed24d-the-zoo-ellinorjohansson\src\hooks\useAnimalHook.ts - no-console - Unexpected console statement.
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla krav för VG-graderingen. Studenten har framgångsrikt implementerat alla nödvändiga funktioner som specificeras i uppgiften och har inkluderat avancerade koncept såsom Context API, custom hooks och reducers för state management. Styling och animeringar är väl genomförda över olika skärmstorlekar.
+📌 **Motivering:** Koden uppfyller alla VG-krav och inkluderar korrekt implementation av routing, context API, reducers för state-hantering, och styling via SCSS. UI/UX är modernt och responsivt, och applikationen använder subtila animationer för interaktioner.
 
 💡 **Förbättringsförslag:**  
-Koden är överlag välstrukturerad och kan underhållas enkelt. Möjliga förbättringar inkluderar: 
-- Kodens läsbarhet kan förbättras genom att bryta upp större komponenter i mindre, självständiga komponenter för bättre översikt och återanvändbarhet. 
-- Animationsförbättringar kan övervägas för specifika UI-element för att ge en ännu mer dynamisk användarupplevelse. 
-- Felhanteringen vid datahämtning kan förbättras genom att tillhandahålla användarvänliga meddelanden eller återhämtningslösningar om nätverksproblematik uppstår.
+Koden är generellt välstrukturerad. Några mindre förbättringar som kan övervägas inkluderar att effektivisera lokal lagring för matningsstatus och eventuellt optimera hur komponenter renderas baserat på deras state/när API-anrop utförs. Utöver detta kan ytterligare felhantering i API-anropet ge en bättre användarupplevelse vid eventuella nätverksproblem.
