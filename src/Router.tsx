@@ -25,4 +25,6 @@ export const router = createBrowserRouter([
             }
         ]
     },
-])
+], {
+    basename: import.meta.env.DEV ? "" : "fed24d-the-zoo-ellinorjohansson/", // For deploy
+})
