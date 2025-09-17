@@ -78,9 +78,3 @@ $ npm run dev
 
 - [@ellinorjohansson](https://www.github.com/ellinorjohansson)
 
-
-Rita gärna upp er lösning så ni enklare förstår hur ni skall dela upp era komponenter och förstå hur kommunikationen mellan komponenter sker.
-
-Välj en teknik gällande css som ni antingen vill lära er mer om eller som ni tycker är rolig och håll er till ert val genom projektet, även om det verkar som att saker inte fungerar som ni vill. Det kan vi lösa tillsammans. 
-
-Ha roligt, skratta och lär er massor!
